@@ -1,0 +1,8 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["/languages/*.json"],
+      "url": "./i18n.schema.json"
+    }
+  ]
+}

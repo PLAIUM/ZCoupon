@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "title": { "type": "string" },
+    "coupon_container_title": { "type": "string" },
+    "server_select_label": { "type": "string" },
+    "server_select_placeholder": { "type": "string" },
+    "server_option_ark": { "type": "string" },
+    "server_option_tera": { "type": "string" },
+    "account_name_label": { "type": "string" },
+    "account_name_placeholder": { "type": "string" },
+    "coupon_code_label": { "type": "string" },
+    "coupon_code_placeholder": { "type": "string" },
+    "redeem_button": { "type": "string" },
+    "modal_title": { "type": "string" }
+  },
+  "required": [
+    "title",
+    "coupon_container_title",
+    "server_select_label",
+    "server_select_placeholder",
+    "server_option_ark",
+    "server_option_tera",
+    "account_name_label",
+    "account_name_placeholder",
+    "coupon_code_label",
+    "coupon_code_placeholder",
+    "redeem_button",
+    "modal_title"
+  ],
+  "additionalProperties": false
+}
