@@ -1,6 +1,8 @@
 import { getLanguageData } from './i18n.js';
 
-// ** 더미 API 엔드포인트 ** (실제 백엔드 URL로 변경해야 합니다!)
+// ** 더미 API 엔드포인트 **
+// 각 서버 URL로 변경해야 합니다.
+// 서버에서는 Cross-Origin Resource Sharing(CORS) 설정이 올바르게 구성되어 있는지 확인해주세요.
 const _API_ENDPOINTS = {
   'EARTH': 'https://localhost:7158/api/Coupon/RedeemCoupon',
   'MARS': 'https://localhost:7158/api/Coupon/RedeemCoupon',
