@@ -1,3 +1,3 @@
-import { initialize } from './viewModel.js';
+import { initialize } from './setup.js';
 
 document.addEventListener('DOMContentLoaded', initialize);
