@@ -4,8 +4,8 @@
   "properties": {
     "title": { "type": "string" },
     "coupon_container_title": { "type": "string" },
-    "server_select_label": { "type": "string" },
-    "server_select_placeholder": { "type": "string" },
+    "server_dropdown_label": { "type": "string" },
+    "server_dropdown_placeholder": { "type": "string" },
     "account_name_label": { "type": "string" },
     "account_name_placeholder": { "type": "string" },
     "coupon_code_label": { "type": "string" },
@@ -24,8 +24,8 @@
   "required": [
     "title",
     "coupon_container_title",
-    "server_select_label",
-    "server_select_placeholder",
+    "server_dropdown_label",
+    "server_dropdown_placeholder",
     "account_name_label",
     "account_name_placeholder",
     "coupon_code_label",

@@ -17,7 +17,7 @@ export function initialize() {
 
 function _collectEventElements() {
   const redeemButton = document.getElementById('redeem-button');
-  const languageDropdown = document.getElementById('lang-select');
+  const languageDropdown = document.getElementById('language-dropdown');
   const modal = document.getElementById('result-modal');
   const closeButtons = document.querySelectorAll('.close-button, #modal-close-button');
   return { redeemButton, languageDropdown, modal, closeButtons };
@@ -30,7 +30,7 @@ function _collectTextElements() {
 }
 
 function _collectInputElements() {
-  const serverSelect = document.getElementById('server-select');
+  const serverSelect = document.getElementById('server-dropdown');
   const accountNameInput = document.getElementById('account-name');
   const couponCodeInput = document.getElementById('coupon-code');
   return { serverSelect, accountNameInput, couponCodeInput };

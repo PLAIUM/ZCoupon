@@ -1,8 +1,8 @@
 {
   "title": "쿠폰 페이지",
   "coupon_container_title": "쿠폰 사용",
-  "server_select_label": "서버 선택",
-  "server_select_placeholder": "-- 서버를 선택하세요 --",
+  "server_dropdown_label": "서버 선택",
+  "server_dropdown_placeholder": "-- 서버를 선택하세요 --",
   "account_name_label": "복구 이메일",
   "account_name_placeholder": "복구 이메일을 입력하세요",
   "coupon_code_label": "쿠폰 번호",
