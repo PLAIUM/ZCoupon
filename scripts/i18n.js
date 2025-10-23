@@ -2,7 +2,7 @@ import ko from '../languages/ko.json' with { type: 'json' };
 import en from '../languages/en.json' with { type: 'json' };
 import jp from '../languages/jp.json' with { type: 'json' };
 
-const LANGUAGES = {
+const _LANGUAGES = {
   'ko': {
     name: '한국어',
     data: ko
@@ -16,14 +16,14 @@ const LANGUAGES = {
     data: jp
   }
 };
-const LANGUAGE_CODES = Object.keys(LANGUAGES);
+const _LANGUAGE_CODES = Object.keys(_LANGUAGES);
 
-Object.freeze(LANGUAGES);
-Object.freeze(LANGUAGE_CODES);
+Object.freeze(_LANGUAGES);
+Object.freeze(_LANGUAGE_CODES);
 
 let _currentLanguageCode = (function () {
   const browserLanguageCode = document.documentElement.getAttribute('lang');
-  return LANGUAGE_CODES.includes(browserLanguageCode) ? browserLanguageCode : 'en';
+  return _LANGUAGE_CODES.includes(browserLanguageCode) ? browserLanguageCode : 'en';
 })();
 
 /**
@@ -40,7 +40,7 @@ export function getLanguageCode() {
  * @returns {void}
  */
 export function setLanguageCode(languageCode) {
-  if (!LANGUAGE_CODES.includes(languageCode)) {
+  if (!_LANGUAGE_CODES.includes(languageCode)) {
     throw new Error(`지원되지 않는 언어 코드: ${languageCode}`);
   }
   _currentLanguageCode = languageCode;
@@ -51,7 +51,7 @@ export function setLanguageCode(languageCode) {
  * @returns {object} 번역 데이터 객체
  */
 export function getLanguageData() {
-  return LANGUAGES[_currentLanguageCode].data;
+  return _LANGUAGES[_currentLanguageCode].data;
 }
 
 /**
@@ -59,5 +59,5 @@ export function getLanguageData() {
  * @returns {string[]} 언어 이름 목록
  */
 export function getSupportingLanguages() {
-  return LANGUAGE_CODES.map(code => ({ code, name: LANGUAGES[code].name }));
+  return _LANGUAGE_CODES.map(code => ({ code, name: _LANGUAGES[code].name }));
 }

@@ -1,16 +1,16 @@
 import { getLanguageData } from './i18n.js';
 
 // ** 더미 API 엔드포인트 ** (실제 백엔드 URL로 변경해야 합니다!)
-const API_ENDPOINTS = {
+const _API_ENDPOINTS = {
   'earth': 'https://api.example.com/earth/redeem',
   'mars': 'https://api.example.com/marth/redeem',
   'venus': 'https://api.example.com/venus/redeem',
   'pluto': 'https://api.example.com/pluto/redeem',
   'jupiter': 'https://api.example.com/jupiter/redeem',
 };
-export const SERVER_NAMES = Object.keys(API_ENDPOINTS);
+export const SERVER_NAMES = Object.keys(_API_ENDPOINTS);
 
-Object.freeze(API_ENDPOINTS);
+Object.freeze(_API_ENDPOINTS);
 Object.freeze(SERVER_NAMES);
 
 /**
@@ -23,19 +23,19 @@ Object.freeze(SERVER_NAMES);
 export async function requestRedeem(serverName, accountName, couponCode) {
   const languageData = getLanguageData();
 
-  if (!isValidServerName(serverName)) {
+  if (!_isValidServerName(serverName)) {
     return `${languageData.invalidServerName} [${serverName}]`;
   }
 
-  if (!isValidEmail(accountName)) {
+  if (!_isValidEmail(accountName)) {
     return `${languageData.invalidAccountName} [${accountName}]`;
   }
 
-  if (!isValidCouponCode(couponCode)) {
+  if (!_isValidCouponCode(couponCode)) {
     return `${languageData.invalidCouponCode} [${couponCode}]`;
   }
 
-  const endpoint = API_ENDPOINTS[serverName];
+  const endpoint = _API_ENDPOINTS[serverName];
   const requestBody = {
     AccountName: accountName,
     CouponCode: couponCode
@@ -64,16 +64,16 @@ export async function requestRedeem(serverName, accountName, couponCode) {
   }
 }
 
-function isValidServerName(name) {
+function _isValidServerName(name) {
   return SERVER_NAMES.includes(name);
 }
 
-function isValidEmail(email) {
+function _isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 
-function isValidCouponCode(code) {
+function _isValidCouponCode(code) {
   const couponRegex = /^[A-Z0-9]{8,12}$/;
   return couponRegex.test(code);
 }
