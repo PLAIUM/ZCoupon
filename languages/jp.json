@@ -15,5 +15,8 @@
   "failure": "クーポンの利用に失敗しました。",
   "pending": "処理中...",
   "serverError": "サーバーエラー",
-  "networkError": "ネットワークエラー"
+  "networkError": "ネットワークエラー",
+  "invalidServerName": "無効なサーバー名です。",
+  "invalidAccountName": "無効なメールアドレス形式です。",
+  "invalidCouponCode": "クーポンコードは8〜12文字の英大文字と数字で構成されている必要があります。"
 }

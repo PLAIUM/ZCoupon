@@ -18,7 +18,10 @@
     "failure": { "type": "string" },
     "pending": { "type": "string" },
     "serverError": { "type": "string" },
-    "networkError": { "type": "string" }
+    "networkError": { "type": "string" },
+    "invalidServerName": { "type": "string" },
+    "invalidAccountName": { "type": "string" },
+    "invalidCouponCode": { "type": "string" }
   },
   "required": [
     "title",
@@ -37,7 +40,10 @@
     "failure",
     "pending",
     "serverError",
-    "networkError"
+    "networkError",
+    "invalidServerName",
+    "invalidAccountName",
+    "invalidCouponCode"
   ],
   "additionalProperties": false
 }

@@ -15,5 +15,8 @@
   "failure": "Coupon redemption failed.",
   "pending": "Processing...",
   "serverError": "Server Error",
-  "networkError": "Network Error"
+  "networkError": "Network Error",
+  "invalidServerName": "Invalid server name.",
+  "invalidAccountName": "Invalid email format.",
+  "invalidCouponCode": "Coupon codes must consist of 8 to 12 uppercase letters and numbers."
 }
