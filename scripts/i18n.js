@@ -2,47 +2,36 @@ import ko from '../languages/ko.json' with { type: 'json' };
 import en from '../languages/en.json' with { type: 'json' };
 import jp from '../languages/jp.json' with { type: 'json' };
 
-const _SUPPORTED_LANGUAGES = {
-  KOREAN: 'ko',
-  ENGLISH: 'en',
-  JAPANESE: 'jp'
+const LANGUAGES = {
+  'ko': {
+    name: '한국어',
+    data: ko
+  },
+  'en': {
+    name: 'English',
+    data: en
+  },
+  'jp': {
+    name: '日本語',
+    data: jp
+  }
 };
-Object.freeze(_SUPPORTED_LANGUAGES);
+const LANGUAGE_CODES = Object.keys(LANGUAGES);
 
-export const LANGUAGE_LIST = {
-  [_SUPPORTED_LANGUAGES.KOREAN]: '한국어',
-  [_SUPPORTED_LANGUAGES.ENGLISH]: 'English',
-  [_SUPPORTED_LANGUAGES.JAPANESE]: '日本語'
-};
-
-const _TRANSLATIONS = {
-  [_SUPPORTED_LANGUAGES.KOREAN]: ko,
-  [_SUPPORTED_LANGUAGES.ENGLISH]: en,
-  [_SUPPORTED_LANGUAGES.JAPANESE]: jp
-};
+Object.freeze(LANGUAGES);
+Object.freeze(LANGUAGE_CODES);
 
 let _currentLanguageCode = (function () {
   const browserLanguageCode = document.documentElement.getAttribute('lang');
-  
-  return _isSupportedLanguage(browserLanguageCode)
-    ? browserLanguageCode
-    : _SUPPORTED_LANGUAGES.ENGLISH;
+  return LANGUAGE_CODES.includes(browserLanguageCode) ? browserLanguageCode : 'en';
 })();
 
 /**
  * 현재 설정된 언어 코드입니다.
  * @returns {string} 언어 코드
  */
-export function getCurrentLanguageCode() {
+export function getLanguageCode() {
   return _currentLanguageCode;
-}
-
-/**
- * 현재 설정된 번역 데이터입니다.
- * @returns {object} 번역 데이터 객체
- */
-export function getCurrentTranslation() {
-  return _TRANSLATIONS[_currentLanguageCode];
 }
 
 /**
@@ -50,13 +39,25 @@ export function getCurrentTranslation() {
  * @param {string} languageCode - 설정할 언어 코드
  * @returns {void}
  */
-export function setLanguage(languageCode) {
-  if (!_isSupportedLanguage(languageCode)) {
+export function setLanguageCode(languageCode) {
+  if (!LANGUAGE_CODES.includes(languageCode)) {
     throw new Error(`지원되지 않는 언어 코드: ${languageCode}`);
   }
   _currentLanguageCode = languageCode;
 }
 
-function _isSupportedLanguage(languageCode) {
-  return Object.values(_SUPPORTED_LANGUAGES).includes(languageCode);
+/**
+ * 현재 설정된 번역 데이터입니다.
+ * @returns {object} 번역 데이터 객체
+ */
+export function getLanguageData() {
+  return LANGUAGES[_currentLanguageCode].data;
+}
+
+/**
+ * 지원하는 언어 목록을 반환합니다.
+ * @returns {string[]} 언어 이름 목록
+ */
+export function getSupportingLanguages() {
+  return LANGUAGE_CODES.map(code => ({ code, name: LANGUAGES[code].name }));
 }
