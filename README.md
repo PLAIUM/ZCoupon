@@ -8,6 +8,15 @@
 
 *이렇게 안 하면 js 파일 간 CORS 에러가 뜹니다.*
 
+## 프로젝트 구조
+> /languages : 다국어 지원 파일을 저장합니다 (파일명은 국가코드로 해야 합니다)
+> /public : 정적 퍼블릭 리소스 파일을 저장합니다 (이미지, 사운드 등)
+> /scripts : 자바스크립트 파일을 저장합니다
+> i18n.schema.json : 다국어 지원 데이터 스키마를 만듭니다
+> index.html : 보여줄 쿠폰 페이지입니다
+> README.md : 지금 보고 있는 이 파일입니다
+> style.css : 보여줄 쿠폰 페이지를 꾸며줍니다
+
 ## API
 쿠폰 사용 요청
 ``` 
@@ -37,6 +46,10 @@
 > SYSTEM_ERROR: 시스템 오류 (기타 오류)
 ```
 
+## 다국어 지원
+1. i18n.schema.json 파일에서 properties 와 required 항목을 추가합니다.
+2. languages 폴더 아래에 `<국가코드>.json` 파일을 추가합니다.
+3. 스키마에 맞춰 내용을 작성합니다.
 
 ## TODO
 * css, js 파일 압축/난독화 (minify.js, terser 참조)
