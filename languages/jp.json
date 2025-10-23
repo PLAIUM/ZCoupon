@@ -10,5 +10,10 @@
   "coupon_code_label": "クーポン番号",
   "coupon_code_placeholder": "クーポン番号を入力してください",
   "redeem_button": "利用する",
-  "modal_title": "クーポン利用結果"
+  "modal_title": "クーポン利用結果",
+  "success": "クーポンを利用しました。",
+  "failure": "クーポンの利用に失敗しました。",
+  "pending": "処理中...",
+  "serverError": "サーバーエラー",
+  "networkError": "ネットワークエラー"
 }

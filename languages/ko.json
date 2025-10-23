@@ -10,5 +10,10 @@
   "coupon_code_label": "쿠폰 번호",
   "coupon_code_placeholder": "쿠폰 번호를 입력하세요",
   "redeem_button": "사용하기",
-  "modal_title": "쿠폰 사용 결과"
+  "modal_title": "쿠폰 사용 결과",
+  "success": "쿠폰을 사용했습니다.",
+  "failure": "쿠폰 사용에 실패했습니다.",
+  "pending": "처리 중...",
+  "serverError": "서버 오류",
+  "networkError": "네트워크 오류"
 }

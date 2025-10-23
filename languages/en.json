@@ -10,5 +10,10 @@
   "coupon_code_label": "Coupon Code",
   "coupon_code_placeholder": "Enter coupon code",
   "redeem_button": "Redeem",
-  "modal_title": "Coupon Redemption Result"
+  "modal_title": "Coupon Redemption Result",
+  "success": "Coupon redeemed successfully.",
+  "failure": "Coupon redemption failed.",
+  "pending": "Processing...",
+  "serverError": "Server Error",
+  "networkError": "Network Error"
 }

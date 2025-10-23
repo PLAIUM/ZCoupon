@@ -13,7 +13,12 @@
     "coupon_code_label": { "type": "string" },
     "coupon_code_placeholder": { "type": "string" },
     "redeem_button": { "type": "string" },
-    "modal_title": { "type": "string" }
+    "modal_title": { "type": "string" },
+    "success": { "type": "string" },
+    "failure": { "type": "string" },
+    "pending": { "type": "string" },
+    "serverError": { "type": "string" },
+    "networkError": { "type": "string" }
   },
   "required": [
     "title",
@@ -27,7 +32,12 @@
     "coupon_code_label",
     "coupon_code_placeholder",
     "redeem_button",
-    "modal_title"
+    "modal_title",
+    "success",
+    "failure",
+    "pending",
+    "serverError",
+    "networkError"
   ],
   "additionalProperties": false
 }
