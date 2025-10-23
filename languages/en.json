@@ -12,9 +12,16 @@
   "success": "Coupon redeemed successfully.",
   "failure": "Coupon redemption failed.",
   "pending": "Processing...",
-  "serverError": "Server Error",
-  "networkError": "Network Error",
-  "invalidServerName": "Invalid server name.",
-  "invalidAccountName": "Invalid email format.",
-  "invalidCouponCode": "Coupon codes must consist of 8 to 12 uppercase letters and numbers."
+  "networkError": "A network error occurred.\nPlease try again shortly.",
+  "invalidServerName": "Invalid server name.\nPlease select from the server list.",
+  "invalidAccountName": "Invalid email format.\nPlease enter a valid recovery email.",
+  "invalidCouponCode": "Invalid coupon code.\nIt must consist of 8 to 12 uppercase letters and numbers.",
+  "INVALID_REQUEST": "Invalid request.",
+  "INVALID_ACCOUNT": "Invalid account.\nPlease check the server.",
+  "INVALID_COUPON": "Invalid coupon.\nPlease check the coupon code again.",
+  "NO_ACCOUNT": "Account not found.\nPlease recheck the recovery email.",
+  "BLOCKED_ACCOUNT": "This account is permanently blocked.\nPlease contact customer service.",
+  "EXPIRED_COUPON": "Expired coupon.",
+  "USED_COUPON": "This coupon has already been used.",
+  "SYSTEM_ERROR": "A system error occurred while processing the task.\nPlease try again shortly."
 }

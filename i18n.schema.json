@@ -15,11 +15,18 @@
     "success": { "type": "string" },
     "failure": { "type": "string" },
     "pending": { "type": "string" },
-    "serverError": { "type": "string" },
     "networkError": { "type": "string" },
     "invalidServerName": { "type": "string" },
     "invalidAccountName": { "type": "string" },
-    "invalidCouponCode": { "type": "string" }
+    "invalidCouponCode": { "type": "string" },
+    "INVALID_REQUEST": { "type": "string" },
+    "INVALID_ACCOUNT": { "type": "string" },
+    "INVALID_COUPON": { "type": "string" },
+    "NO_ACCOUNT": { "type": "string" },
+    "BLOCKED_ACCOUNT": { "type": "string" },
+    "EXPIRED_COUPON": { "type": "string" },
+    "USED_COUPON": { "type": "string" },
+    "SYSTEM_ERROR": { "type": "string" }
   },
   "required": [
     "title",
@@ -35,11 +42,18 @@
     "success",
     "failure",
     "pending",
-    "serverError",
     "networkError",
     "invalidServerName",
     "invalidAccountName",
-    "invalidCouponCode"
+    "invalidCouponCode",
+    "INVALID_REQUEST",
+    "INVALID_ACCOUNT",
+    "INVALID_COUPON",
+    "NO_ACCOUNT",
+    "BLOCKED_ACCOUNT",
+    "EXPIRED_COUPON",
+    "USED_COUPON",
+    "SYSTEM_ERROR"
   ],
   "additionalProperties": false
 }

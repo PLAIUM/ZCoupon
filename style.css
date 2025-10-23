@@ -130,4 +130,5 @@ input[type="text"], select {
 #modal-message {
     font-size: 18px;
     margin: 20px 0;
+    white-space: pre-wrap;
 }

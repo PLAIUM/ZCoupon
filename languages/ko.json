@@ -12,9 +12,16 @@
   "success": "쿠폰을 사용했습니다.",
   "failure": "쿠폰 사용에 실패했습니다.",
   "pending": "처리 중...",
-  "serverError": "서버 오류",
-  "networkError": "네트워크 오류",
-  "invalidServerName": "유효하지 않은 서버 이름입니다.",
-  "invalidAccountName": "유효하지 않은 이메일 형식입니다.",
-  "invalidCouponCode": "쿠폰 코드는 8~12자의 대문자와 숫자로 구성되어야 합니다."
+  "networkError": "네트워크 오류가 발생했습니다.\n잠시 후 다시 시도해주세요.",
+  "invalidServerName": "유효하지 않은 서버 이름입니다.\n서버 목록에서 선택해주세요.",
+  "invalidAccountName": "유효하지 않은 이메일 형식입니다.\n올바른 복구 이메일을 입력해주세요.",
+  "invalidCouponCode": "유효하지 않은 쿠폰 번호입니다.\n8~12자의 대문자와 숫자로 구성되어야 합니다.",
+  "INVALID_REQUEST": "유효하지 않은 요청입니다.",
+  "INVALID_ACCOUNT": "유효하지 않은 계정입니다.\n서버를 확인해주세요.",
+  "INVALID_COUPON": "유효하지 않은 쿠폰입니다.\n쿠폰 번호를 다시 확인해주세요.",
+  "NO_ACCOUNT": "계정을 찾을 수 없습니다.\n복구 이메일을 다시 확인해주세요.",
+  "BLOCKED_ACCOUNT": "영구정지 계정입니다.\n고객 센터로 문의해주세요.",
+  "EXPIRED_COUPON": "만료된 쿠폰입니다.",
+  "USED_COUPON": "이미 사용한 쿠폰입니다.",
+  "SYSTEM_ERROR": "작업을 처리하는 중 시스템 오류가 발생했습니다.\n잠시 후 다시 시도해주세요."
 }

@@ -2,11 +2,11 @@ import { getLanguageData } from './i18n.js';
 
 // ** 더미 API 엔드포인트 ** (실제 백엔드 URL로 변경해야 합니다!)
 const _API_ENDPOINTS = {
-  'EARTH': 'https://api.example.com/earth/redeem',
-  'MARS': 'https://api.example.com/marth/redeem',
-  'VENUS': 'https://api.example.com/venus/redeem',
-  'PLUTO': 'https://api.example.com/pluto/redeem',
-  'JUPITER': 'https://api.example.com/jupiter/redeem',
+  'EARTH': 'https://localhost:7158/api/Coupon/RedeemCoupon',
+  'MARS': 'https://localhost:7158/api/Coupon/RedeemCoupon',
+  'VENUS': 'https://localhost:7158/api/Coupon/RedeemCoupon',
+  'PLUTO': 'https://localhost:7158/api/Coupon/RedeemCoupon',
+  'JUPITER': 'https://localhost:7158/api/Coupon/RedeemCoupon',
 };
 export const SERVER_NAMES = Object.keys(_API_ENDPOINTS);
 
@@ -24,21 +24,21 @@ export async function requestRedeem(serverName, accountName, couponCode) {
   const languageData = getLanguageData();
 
   if (!_isValidServerName(serverName)) {
-    return `${languageData.invalidServerName} [${serverName}]`;
+    return `${languageData.invalidServerName}\n[${serverName}]`;
   }
 
   if (!_isValidEmail(accountName)) {
-    return `${languageData.invalidAccountName} [${accountName}]`;
+    return `${languageData.invalidAccountName}\n[${accountName}]`;
   }
 
   if (!_isValidCouponCode(couponCode)) {
-    return `${languageData.invalidCouponCode} [${couponCode}]`;
+    return `${languageData.invalidCouponCode}\n[${couponCode}]`;
   }
 
   const endpoint = _API_ENDPOINTS[serverName];
   const requestBody = {
-    AccountName: accountName,
-    CouponCode: couponCode
+    accountName,
+    couponCode
   };
   
   try {
@@ -54,7 +54,7 @@ export async function requestRedeem(serverName, accountName, couponCode) {
     
     if (response.status === 400) {
       const errorData = await response.json();
-      return `${languageData.failure} ${errorData.ErrorMessage || languageData.serverError}`;
+      return `${languageData.failure}\n[${languageData[errorData.errorCode] || languageData.serverError}]`;
     }
     
     return languageData.serverError;
