@@ -3,8 +3,6 @@
   "coupon_container_title": "クーポン利用",
   "server_select_label": "サーバー選択",
   "server_select_placeholder": "-- サーバーを選んでください --",
-  "server_option_ark": "アークサーバー",
-  "server_option_tera": "テラサーバー",
   "account_name_label": "復旧用メールアドレス",
   "account_name_placeholder": "復旧用メールアドレスを入力してください",
   "coupon_code_label": "クーポン番号",

@@ -3,8 +3,6 @@
   "coupon_container_title": "Redeem Coupon",
   "server_select_label": "Select Server",
   "server_select_placeholder": "-- Select a Server --",
-  "server_option_ark": "Ark Server",
-  "server_option_tera": "Tera Server",
   "account_name_label": "Recovery Email",
   "account_name_placeholder": "Enter recovery email",
   "coupon_code_label": "Coupon Code",

@@ -1,5 +1,5 @@
 import { getLanguageCode, setLanguageCode, getLanguageData, getSupportingLanguages } from './i18n.js';
-import { requestRedeem } from './redeem.js';
+import { SERVER_NAMES, requestRedeem } from './redeem.js';
 
 /**
  * 이벤트를 바인딩하고 텍스트를 초기화합니다.
@@ -10,8 +10,8 @@ export function initialize() {
   const textElements = _collectTextElements();
   const inputElements = _collectInputElements();
 
-  _initializeEventListeners(eventElements, inputElements, textElements);
-  _initializeLanguageDropdown(eventElements.languageDropdown);
+  _initializeEventListeners(eventElements, textElements, inputElements);
+  _initializeDropdowns(eventElements.languageDropdown, inputElements.serverSelect);
   _updateTextElements(textElements);
 }
 
@@ -46,7 +46,7 @@ function _initializeEventListeners(eventElements, textElements, inputElements) {
   window.addEventListener('click', (event) => _onModalOutsideClick(event.target, modal));
 }
 
-function _initializeLanguageDropdown(languageDropdown) {
+function _initializeDropdowns(languageDropdown, serverDropdown) {
   const supportingLanguages = getSupportingLanguages()
   const currentLanguageCode = getLanguageCode();
   languageDropdown.innerHTML = '';
@@ -57,6 +57,13 @@ function _initializeLanguageDropdown(languageDropdown) {
     option.value = code;
     option.selected = code === currentLanguageCode;
     languageDropdown.appendChild(option);
+  });
+
+  SERVER_NAMES.forEach(serverName => {
+    const option = document.createElement('option');
+    option.textContent = serverName;
+    option.value = serverName;
+    serverDropdown.appendChild(option);
   });
 }
 

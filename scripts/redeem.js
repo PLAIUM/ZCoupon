@@ -8,7 +8,7 @@ const API_ENDPOINTS = {
   'pluto': 'https://api.example.com/pluto/redeem',
   'jupiter': 'https://api.example.com/jupiter/redeem',
 };
-const SERVER_NAMES = Object.keys(API_ENDPOINTS);
+export const SERVER_NAMES = Object.keys(API_ENDPOINTS);
 
 Object.freeze(API_ENDPOINTS);
 Object.freeze(SERVER_NAMES);
