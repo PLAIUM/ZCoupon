@@ -2,11 +2,11 @@ import { getLanguageData } from './i18n.js';
 
 // ** 더미 API 엔드포인트 ** (실제 백엔드 URL로 변경해야 합니다!)
 const _API_ENDPOINTS = {
-  'earth': 'https://api.example.com/earth/redeem',
-  'mars': 'https://api.example.com/marth/redeem',
-  'venus': 'https://api.example.com/venus/redeem',
-  'pluto': 'https://api.example.com/pluto/redeem',
-  'jupiter': 'https://api.example.com/jupiter/redeem',
+  'EARTH': 'https://api.example.com/earth/redeem',
+  'MARS': 'https://api.example.com/marth/redeem',
+  'VENUS': 'https://api.example.com/venus/redeem',
+  'PLUTO': 'https://api.example.com/pluto/redeem',
+  'JUPITER': 'https://api.example.com/jupiter/redeem',
 };
 export const SERVER_NAMES = Object.keys(_API_ENDPOINTS);
 
