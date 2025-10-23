@@ -24,9 +24,7 @@ function _collectEventElements() {
 }
 
 function _collectTextElements() {
-  const textElements = document.querySelectorAll('[data-i18n-key], [data-i18n-placeholder-key]');
-  const titleElement = document.querySelector('title');
-  return [...textElements, titleElement];
+  return document.querySelectorAll('[data-i18n-key], [data-i18n-placeholder-key]');
 }
 
 function _collectInputElements() {
