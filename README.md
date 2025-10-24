@@ -2,10 +2,11 @@
 외계인은 배고파 쿠폰 페이지입니다.  
 http://www.plaium.com/ZCoupon/
 
-## 실행 방법
+## 작업 방법
 1. Visual Studio Code에서 `Live Server` Extension을 설치합니다.
 2. Visual Studio Code의 Project Explorer에서 index.html 파일을 찾습니다.
 3. index.html 파일을 마우스 우클릭하고 `Open with Live Server` 항목을 누릅니다.
+4. 작업이 완료되면 commit을 작성하고 main branch로 push합니다. Actions를 통해 Page가 자동 갱신됩니다.
 
 *이렇게 안 하면 js 파일 간 CORS 에러가 뜹니다.*
 
