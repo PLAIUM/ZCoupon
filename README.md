@@ -35,21 +35,23 @@
 > body: { errorCode: string }
 ```
 에러 코드 종류
-```
-> INVALID_REQUEST: 유효하지 않은 요청 (쿠폰 서버가 아닌 경우)
-> INVALID_ACCOUNT: 유효하지 않은 계정 (이메일 형식이 잘못된 경우)
-> INVALID_COUPON: 유효하지 않은 쿠폰 (쿠폰 번호 형식이 잘못된 경우, 쿠폰이 존재하지 않는 경우, 쿠폰 사용기한 시작하지 않은 경우)
-> NO_ACCOUNT: 존재하지 않는 계정
-> BLOCKED_ACCOUNT: 영구정지 계정
-> EXPIRED_COUPON: 사용기한 만료된 쿠폰
-> USED_COUPON: 이미 사용한 쿠폰
-> SYSTEM_ERROR: 시스템 오류 (기타 오류)
-```
+| errorCode | 설명 |
+| --------- | ----------- |
+| INVALID_REQUEST | 유효하지 않은 요청 (쿠폰 서버가 아닌 경우) |
+| INVALID_ACCOUNT | 유효하지 않은 계정 (이메일 형식이 잘못된 경우) |
+| INVALID_COUPON | 유효하지 않은 쿠폰 (쿠폰 번호 형식이 잘못된 경우, 쿠폰이 존재하지 않는 경우, 쿠폰 사용기한 시작하지 않은 경우) |
+| NO_ACCOUNT | 존재하지 않는 계정 |
+| BLOCKED_ACCOUNT | 영구정지 계정 |
+| EXPIRED_COUPON | 사용기한 만료된 쿠폰 |
+| USED_COUPON | 이미 사용한 쿠폰 |
+| SYSTEM_ERROR | 시스템 오류 (기타 오류) |
 
 ## 다국어 지원
 1. i18n.schema.json 파일에서 properties 와 required 항목을 추가합니다.
 2. languages 폴더 아래에 `<국가코드>.json` 파일을 추가합니다.
 3. 스키마에 맞춰 내용을 작성합니다.
+
+*i18n.schema.json 파일은 vscode 상에서 스키마 불일치 여부를 확인해줍니다.*
 
 ## TODO
 * css, js 파일 압축/난독화 (minify.js, terser 참조)
