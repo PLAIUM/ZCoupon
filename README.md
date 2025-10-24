@@ -56,15 +56,15 @@ http://www.plaium.com/ZCoupon/
 *i18n.schema.json 파일은 vscode 상에서 스키마 불일치 여부를 확인해줍니다.*
 
 ## TODO
-* css, js 파일 압축/난독화 (minify.js, terser 참조)
+* css, js 파일 압축/난독화 ([minify.js](https://minify-js.com/), [terser](https://terser.org/) 참조)
   * 압축하면 용량이 줄어들기도 하지만, 주석이 삭제됩니다.
   * 난독화하지 않으면 리버스 엔지니어링하기 쉽습니다.
 * 요청 페이로드 암호화
   * 현재 요청 페이로드를 평문으로 보내고 있습니다.
   * 문제될 일은 많지 않아 보이지만, 암호화하면 좋습니다.
  * 폰트 변경
-   * 가능하면 웹폰트가 편하다 : https://fonts.google.com/
-   * 어렵다면 폰트를 다운받아서 css로 적용한다.
+   * 가능하면 웹폰트가 편합니다 : https://fonts.google.com/
+   * 폰트를 다운받아서 css로 적용할 수도 있습니다.
 * 쿠폰 백엔드 연결
-  * 동작 가능한 API 엔드포인트를 연결한다 : /scripts/redeem.js
+  * 동작 가능한 API 엔드포인트를 연결해야 합니다 : `/scripts/redeem.js` 파일의 `_API_ENDPOINTS`
 
