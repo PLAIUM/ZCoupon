@@ -1,5 +1,6 @@
 # ZCoupon
-외계인은 배고파 쿠폰 페이지입니다.
+외계인은 배고파 쿠폰 페이지입니다.  
+http://www.plaium.com/ZCoupon/
 
 ## 실행 방법
 1. Visual Studio Code에서 `Live Server` Extension을 설치합니다.
